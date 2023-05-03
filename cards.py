@@ -1,3 +1,13 @@
+class Card:
+    def __init__(self, face, suit, value):
+        self.face = face
+        self.suit = suit
+        self.name = self.face + ' of ' + self.suit
+        self.value = value
+
+    def idCard(self):
+        print(self.name)
+
 deck = []
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 for suit in suits:
@@ -13,4 +23,6 @@ for suit in suits:
         elif face == 12:
             deck.append(f'King of {suit}')
 
-print(deck)
+#print(deck)
+c1 = Card('Ace', 'Diamonds', 1)
+c1.idCard()
