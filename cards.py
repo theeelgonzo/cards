@@ -29,5 +29,10 @@ for suit in suits:
             card = Card('King', suit, 13)
             deck.append(card)
 
+def shuffle():
+    shuffledDeck = []
+    pass
+
+
 for card in deck:
     card.idCard()
