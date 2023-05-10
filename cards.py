@@ -1,3 +1,5 @@
+import random
+
 class Card:
     def __init__(self, face, suit, value):
         self.face = face
@@ -30,10 +32,21 @@ for suit in suits:
             deck.append(card)
 
 def shuffle(deck):
+    deckLength = len(deck)
     shuffledDeck = []
-    for card in deck:
-        pass
+    while deckLength > 0:
+        for card in deck:
+            shufCard = random.choice(deck)
+            if shufCard not in shuffledDeck:
+                shuffledDeck.append(shufCard)
+                deckLength -= 1
+            else:
+                break
+    for card in shuffledDeck:
+        card.idCard()
+        
 
 
 for card in deck:
     card.idCard()
+shuffle(deck)
